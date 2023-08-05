@@ -6,8 +6,11 @@ function FormAddPost({ onAddPost }) {
 
   const handleSubmit = function (e) {
     e.preventDefault();
+
     if (!body || !title) return;
+
     onAddPost({ title, body });
+
     setTitle("");
     setBody("");
   };
@@ -19,11 +22,13 @@ function FormAddPost({ onAddPost }) {
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Post title"
       />
+
       <textarea
         value={body}
         onChange={(e) => setBody(e.target.value)}
         placeholder="Post body"
       />
+
       <button>Add post</button>
     </form>
   );
