@@ -35,7 +35,7 @@ function PostProvider({ children }) {
       searchQuery,
       setSearchQuery,
     };
-  }, []);
+  }, [searchedPosts, searchQuery]);
 
   return (
     <PostContext.Provider value={value}>
